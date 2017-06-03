@@ -18,6 +18,16 @@
 		B7204D9C1ED6F3F400F3E71D /* FMLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7204D9B1ED6F3F400F3E71D /* FMLoginInfo.m */; };
 		B7204DA01ED6F91B00F3E71D /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = B7204D9F1ED6F91B00F3E71D /* NSData+AES256.m */; };
 		B7204DA51ED6FE3D00F3E71D /* FMUIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B7204DA41ED6FE3D00F3E71D /* FMUIUtil.m */; };
+		B724332A1EE2949A0038DD37 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B72433291EE2949A0038DD37 /* RegisterViewController.m */; };
+		B724332E1EE2964A0038DD37 /* TextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B724332D1EE2964A0038DD37 /* TextInputCell.m */; };
+		B72433311EE29BB70038DD37 /* WSLoginTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B72433301EE29BB70038DD37 /* WSLoginTitleCell.m */; };
+		B72433351EE29D7F0038DD37 /* WSSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B72433341EE29D7F0038DD37 /* WSSTextField.m */; };
+		B72433381EE2A0C90038DD37 /* WSLoginBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B72433371EE2A0C90038DD37 /* WSLoginBtnCell.m */; };
+		B724333C1EE2A4D20038DD37 /* KSToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = B724333B1EE2A4D20038DD37 /* KSToastView.m */; };
+		B72433421EE2A5D80038DD37 /* JKNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B724333F1EE2A5D80038DD37 /* JKNotifier.m */; };
+		B72433431EE2A5D80038DD37 /* JKNotifierBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B72433411EE2A5D80038DD37 /* JKNotifierBar.m */; };
+		B72433491EE2AD960038DD37 /* WSLeftMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B72433461EE2AD960038DD37 /* WSLeftMenuCell.m */; };
+		B724334A1EE2AD960038DD37 /* WSLeftMenuHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B72433481EE2AD960038DD37 /* WSLeftMenuHeadCell.m */; };
 		B7677AA11DB7207D002ED247 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7677AA01DB7207D002ED247 /* DiscoverViewController.m */; };
 		B7677AA41DB72090002ED247 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7677AA31DB72090002ED247 /* MainViewController.m */; };
 		B7677AA71DB7209B002ED247 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7677AA61DB7209B002ED247 /* MineViewController.m */; };
@@ -98,6 +108,26 @@
 		B7204DA11ED6FD7F00F3E71D /* URLPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLPath.h; sourceTree = "<group>"; };
 		B7204DA31ED6FE3D00F3E71D /* FMUIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMUIUtil.h; sourceTree = "<group>"; };
 		B7204DA41ED6FE3D00F3E71D /* FMUIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMUIUtil.m; sourceTree = "<group>"; };
+		B72433281EE2949A0038DD37 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		B72433291EE2949A0038DD37 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		B724332C1EE2964A0038DD37 /* TextInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputCell.h; sourceTree = "<group>"; };
+		B724332D1EE2964A0038DD37 /* TextInputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputCell.m; sourceTree = "<group>"; };
+		B724332F1EE29BB70038DD37 /* WSLoginTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoginTitleCell.h; sourceTree = "<group>"; };
+		B72433301EE29BB70038DD37 /* WSLoginTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoginTitleCell.m; sourceTree = "<group>"; };
+		B72433331EE29D7F0038DD37 /* WSSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSTextField.h; sourceTree = "<group>"; };
+		B72433341EE29D7F0038DD37 /* WSSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSTextField.m; sourceTree = "<group>"; };
+		B72433361EE2A0C90038DD37 /* WSLoginBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoginBtnCell.h; sourceTree = "<group>"; };
+		B72433371EE2A0C90038DD37 /* WSLoginBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoginBtnCell.m; sourceTree = "<group>"; };
+		B724333A1EE2A4D20038DD37 /* KSToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSToastView.h; sourceTree = "<group>"; };
+		B724333B1EE2A4D20038DD37 /* KSToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSToastView.m; sourceTree = "<group>"; };
+		B724333E1EE2A5D80038DD37 /* JKNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNotifier.h; sourceTree = "<group>"; };
+		B724333F1EE2A5D80038DD37 /* JKNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKNotifier.m; sourceTree = "<group>"; };
+		B72433401EE2A5D80038DD37 /* JKNotifierBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKNotifierBar.h; sourceTree = "<group>"; };
+		B72433411EE2A5D80038DD37 /* JKNotifierBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKNotifierBar.m; sourceTree = "<group>"; };
+		B72433451EE2AD960038DD37 /* WSLeftMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLeftMenuCell.h; sourceTree = "<group>"; };
+		B72433461EE2AD960038DD37 /* WSLeftMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLeftMenuCell.m; sourceTree = "<group>"; };
+		B72433471EE2AD960038DD37 /* WSLeftMenuHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLeftMenuHeadCell.h; sourceTree = "<group>"; };
+		B72433481EE2AD960038DD37 /* WSLeftMenuHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLeftMenuHeadCell.m; sourceTree = "<group>"; };
 		B7677A9F1DB7207D002ED247 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		B7677AA01DB7207D002ED247 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		B7677AA21DB72090002ED247 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -259,6 +289,7 @@
 		B70E6F621ED567B900F74DD4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B72433271EE2932D0038DD37 /* Regest */,
 				B70E6F631ED567B900F74DD4 /* LoginViewController.h */,
 				B70E6F641ED567B900F74DD4 /* LoginViewController.m */,
 			);
@@ -337,6 +368,71 @@
 			path = FMUIUtil;
 			sourceTree = "<group>";
 		};
+		B72433271EE2932D0038DD37 /* Regest */ = {
+			isa = PBXGroup;
+			children = (
+				B724332B1EE296210038DD37 /* Cells */,
+				B72433281EE2949A0038DD37 /* RegisterViewController.h */,
+				B72433291EE2949A0038DD37 /* RegisterViewController.m */,
+			);
+			path = Regest;
+			sourceTree = "<group>";
+		};
+		B724332B1EE296210038DD37 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B72433361EE2A0C90038DD37 /* WSLoginBtnCell.h */,
+				B72433371EE2A0C90038DD37 /* WSLoginBtnCell.m */,
+				B724332F1EE29BB70038DD37 /* WSLoginTitleCell.h */,
+				B72433301EE29BB70038DD37 /* WSLoginTitleCell.m */,
+				B724332C1EE2964A0038DD37 /* TextInputCell.h */,
+				B724332D1EE2964A0038DD37 /* TextInputCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B72433321EE29D7F0038DD37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B724333D1EE2A5D80038DD37 /* WSNotifiView */,
+				B72433391EE2A4D20038DD37 /* KSToastView */,
+				B72433331EE29D7F0038DD37 /* WSSTextField.h */,
+				B72433341EE29D7F0038DD37 /* WSSTextField.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B72433391EE2A4D20038DD37 /* KSToastView */ = {
+			isa = PBXGroup;
+			children = (
+				B724333A1EE2A4D20038DD37 /* KSToastView.h */,
+				B724333B1EE2A4D20038DD37 /* KSToastView.m */,
+			);
+			path = KSToastView;
+			sourceTree = "<group>";
+		};
+		B724333D1EE2A5D80038DD37 /* WSNotifiView */ = {
+			isa = PBXGroup;
+			children = (
+				B724333E1EE2A5D80038DD37 /* JKNotifier.h */,
+				B724333F1EE2A5D80038DD37 /* JKNotifier.m */,
+				B72433401EE2A5D80038DD37 /* JKNotifierBar.h */,
+				B72433411EE2A5D80038DD37 /* JKNotifierBar.m */,
+			);
+			path = WSNotifiView;
+			sourceTree = "<group>";
+		};
+		B72433441EE2AD7B0038DD37 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B72433451EE2AD960038DD37 /* WSLeftMenuCell.h */,
+				B72433461EE2AD960038DD37 /* WSLeftMenuCell.m */,
+				B72433471EE2AD960038DD37 /* WSLeftMenuHeadCell.h */,
+				B72433481EE2AD960038DD37 /* WSLeftMenuHeadCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B7677A9B1DB7205B002ED247 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +454,7 @@
 		B7677A9D1DB7205B002ED247 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				B72433441EE2AD7B0038DD37 /* Cells */,
 				B7677AA51DB7209B002ED247 /* MineViewController.h */,
 				B7677AA61DB7209B002ED247 /* MineViewController.m */,
 			);
@@ -418,6 +515,7 @@
 		B769B9C01DA9E04700B19560 /* PublicBase */ = {
 			isa = PBXGroup;
 			children = (
+				B72433321EE29D7F0038DD37 /* Views */,
 				B769BA211DA9E04700B19560 /* Util */,
 				B769B9C11DA9E04700B19560 /* Additions */,
 				B769B9C61DA9E04700B19560 /* Category */,
@@ -856,6 +954,7 @@
 			files = (
 				B769BA3D1DA9E04700B19560 /* UILabel+CountDown.m in Sources */,
 				B769BA2B1DA9E04700B19560 /* NSNotificationCenter+Addition.m in Sources */,
+				B72433351EE29D7F0038DD37 /* WSSTextField.m in Sources */,
 				B7204DA01ED6F91B00F3E71D /* NSData+AES256.m in Sources */,
 				B7A166871DB4BD4300BD9330 /* RootTabBarViewController.m in Sources */,
 				B769BA451DA9E04700B19560 /* UILabel+Addition.m in Sources */,
@@ -870,6 +969,7 @@
 				B70E6F651ED567B900F74DD4 /* FMFormViewController.m in Sources */,
 				B769BA391DA9E04700B19560 /* NSString+Size.m in Sources */,
 				B70E6F5E1ED5674600F74DD4 /* FMAppUtil.m in Sources */,
+				B72433491EE2AD960038DD37 /* WSLeftMenuCell.m in Sources */,
 				B7A60A411DACBF9700FFE0CC /* FXMBaseViewController.m in Sources */,
 				B769BA331DA9E04700B19560 /* NSObject+GCD.m in Sources */,
 				B769BA2E1DA9E04700B19560 /* NSDictionary+Addition.m in Sources */,
@@ -889,19 +989,24 @@
 				B769B9AD1DA9DDD400B19560 /* AppDelegate.m in Sources */,
 				B769BA4A1DA9E04700B19560 /* UIViewController+Loading.m in Sources */,
 				B7A60A461DACC19300FFE0CC /* NYXImagesHelper.m in Sources */,
+				B72433421EE2A5D80038DD37 /* JKNotifier.m in Sources */,
+				B724332E1EE2964A0038DD37 /* TextInputCell.m in Sources */,
 				B7204DA51ED6FE3D00F3E71D /* FMUIUtil.m in Sources */,
 				B769BA371DA9E04700B19560 /* NSString+Encrypt.m in Sources */,
 				B769BA4C1DA9E04700B19560 /* FMDevice.m in Sources */,
 				B7A60A401DACBF9700FFE0CC /* FMNavBar.m in Sources */,
 				B769BA2F1DA9E04700B19560 /* NSFileManager+Paths.m in Sources */,
+				B724333C1EE2A4D20038DD37 /* KSToastView.m in Sources */,
 				B769BA4D1DA9E04700B19560 /* FMFile.m in Sources */,
 				B769BA351DA9E04700B19560 /* NSAttributedString+Size.m in Sources */,
 				B70E6F751ED5683A00F74DD4 /* FMEmptyCell.m in Sources */,
 				B769BA481DA9E04700B19560 /* UIView+Tap.m in Sources */,
+				B724334A1EE2AD960038DD37 /* WSLeftMenuHeadCell.m in Sources */,
 				B769BA491DA9E04700B19560 /* UIViewController+Addition.m in Sources */,
 				B769BA461DA9E04700B19560 /* UIView+Frame.m in Sources */,
 				B769B9AA1DA9DDD400B19560 /* main.m in Sources */,
 				B769BA4B1DA9E04700B19560 /* FMColor.m in Sources */,
+				B72433381EE2A0C90038DD37 /* WSLoginBtnCell.m in Sources */,
 				B769BA3E1DA9E04700B19560 /* UIImage+Addition.m in Sources */,
 				B769BA341DA9E04700B19560 /* NSObject+Runtime.m in Sources */,
 				B769BA361DA9E04700B19560 /* NSString+Addition.m in Sources */,
@@ -909,9 +1014,12 @@
 				B769BA301DA9E04700B19560 /* NSObject+AddProperty.m in Sources */,
 				B769BA471DA9E04700B19560 /* UIView+Layer.m in Sources */,
 				B769BA411DA9E04700B19560 /* UIImageView+Addition.m in Sources */,
+				B724332A1EE2949A0038DD37 /* RegisterViewController.m in Sources */,
 				B769BA2C1DA9E04700B19560 /* NSArray+Addition.m in Sources */,
 				B70E6F791ED5686800F74DD4 /* FMKeyBoardUtil.m in Sources */,
+				B72433431EE2A5D80038DD37 /* JKNotifierBar.m in Sources */,
 				B769BA3B1DA9E04700B19560 /* UIBarButtonItem+Addition.m in Sources */,
+				B72433311EE29BB70038DD37 /* WSLoginTitleCell.m in Sources */,
 				B769BA321DA9E04700B19560 /* NSObject+AutoCoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

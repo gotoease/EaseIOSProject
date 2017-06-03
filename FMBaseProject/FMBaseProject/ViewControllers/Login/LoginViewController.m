@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "RegisterViewController.h"
 @interface LoginViewController (){
     UIImageView *View;
     UIView *bgView;
@@ -163,10 +163,10 @@
     landBtn.backgroundColor=[UIColor colorWithRed:248/255.0f green:144/255.0f blue:34/255.0f alpha:1];
     landBtn.layer.cornerRadius=5.0f;
     
-    UIButton *newUserBtn=[self createButtonFrame:CGRectMake(5, 235, 70, 30) backImageName:nil title:@"快速注册" titleColor:[UIColor grayColor] font:[UIFont systemFontOfSize:13] target:self action:@selector(registration:)];
-    //newUserBtn.backgroundColor=[UIColor lightGrayColor];
-    
-    UIButton *forgotPwdBtn=[self createButtonFrame:CGRectMake(self.view.frame.size.width-75, 235, 60, 30) backImageName:nil title:@"找回密码" titleColor:[UIColor grayColor] font:[UIFont systemFontOfSize:13] target:self action:@selector(fogetPwd:)];
+//    UIButton *newUserBtn=[self createButtonFrame:CGRectMake(5, 235, 70, 30) backImageName:nil title:@"快速注册" titleColor:[UIColor grayColor] font:[UIFont systemFontOfSize:13] target:self action:@selector(registration:)];
+//    //newUserBtn.backgroundColor=[UIColor lightGrayColor];
+//    
+//    UIButton *forgotPwdBtn=[self createButtonFrame:CGRectMake(self.view.frame.size.width-75, 235, 60, 30) backImageName:nil title:@"找回密码" titleColor:[UIColor grayColor] font:[UIFont systemFontOfSize:13] target:self action:@selector(fogetPwd:)];
     //fogotPwdBtn.backgroundColor=[UIColor lightGrayColor];
     
     
@@ -200,8 +200,8 @@
     [self.view addSubview:QQBtn];
     [self.view addSubview:xinlangBtn];
     [self.view addSubview:landBtn];
-    [self.view addSubview:newUserBtn];
-    [self.view addSubview:forgotPwdBtn];
+//    [self.view addSubview:newUserBtn];
+//    [self.view addSubview:forgotPwdBtn];
     
     
 }
@@ -324,7 +324,7 @@
 
 -(void)zhuce
 {
-//    [self.navigationController pushViewController:[[MMZCHMViewController alloc]init] animated:YES];
+    [self.navigationController pushViewController:[[RegisterViewController alloc]init] animated:YES];
 }
 
 -(void)registration:(UIButton *)button

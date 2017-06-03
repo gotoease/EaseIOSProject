@@ -18,6 +18,4 @@
 @property (nonatomic, strong) NSMutableArray *sectionArray;
 @property (nonatomic, strong) RETableViewSection *section0;
 - (void)addHeader;
--(void)formTableReload;
-
 @end

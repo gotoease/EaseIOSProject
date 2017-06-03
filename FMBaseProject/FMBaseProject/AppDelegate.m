@@ -24,6 +24,10 @@
     rootVC.delegate = self;
     self.window.rootViewController=rootVC;
     [self.window makeKeyAndVisible];
+    
+    AddNotification(UIKeyboardWillShowNotification, @selector(onHandleKeyboardWillShow));
+    AddNotification(UIKeyboardWillHideNotification, @selector(onHandleKeyboardWillHide));
+    
     return YES;
 }
 
@@ -66,6 +70,22 @@
     
 }
 
+-(void)showToast:(NSString *)str {
+    [self performSelector:@selector(showToastT:) withObject:str afterDelay:0.2];
+}
+
+- (void)showToastT:(id)ttt {
+    [KSToastView ks_showToast:[FMUtil strRelay:ttt]];
+}
+
+
+- (void)onHandleKeyboardWillShow {
+    _isKeyboard = YES;
+}
+
+- (void)onHandleKeyboardWillHide {
+    _isKeyboard = NO;
+}
 
 
 @end

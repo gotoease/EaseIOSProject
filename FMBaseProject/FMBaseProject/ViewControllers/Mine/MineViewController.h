@@ -6,8 +6,8 @@
 //  Copyright © 2016年 付新明. All rights reserved.
 //
 
-#import "FXMBaseViewController.h"
+#import "FMFormViewController.h"
 
-@interface MineViewController : FXMBaseViewController
+@interface MineViewController : FMFormViewController
 
 @end

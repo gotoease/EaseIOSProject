@@ -17,14 +17,12 @@
 @synthesize section0;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    sectionArray = [NSMutableArray array];
-    section0 = [RETableViewSection section];
     
     [self initView];
 }
 - (void)initView
 {
-    _formTable = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationBarHeight, kScreenWidth, kScreenHeight - kScreenHeight) style:UITableViewStylePlain];
+    _formTable = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationBarHeight, kScreenWidth, kScreenHeight - kNavigationBarHeight) style:UITableViewStylePlain];
     _formTable.showsVerticalScrollIndicator = NO;
     _formTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     _formTable.backgroundColor = [UIColor clearColor];
@@ -67,9 +65,4 @@
     return viewControllers;
 }
 
--(void)formTableReload{
-    [sectionArray addObject:section0];
-    [self.formManager replaceSectionsWithSectionsFromArray:sectionArray];
-    [self.formTable reloadData];
-}
 @end

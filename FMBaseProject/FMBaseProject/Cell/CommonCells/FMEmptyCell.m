@@ -58,7 +58,7 @@
     [super cellWillAppear];
 }
 
-- (void)layoutSubvieFM
+- (void)layoutSubviews
 {
     [super layoutSubviews];
     self.contentView.backgroundColor = self.item.bgColor;

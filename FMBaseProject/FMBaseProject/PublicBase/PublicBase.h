@@ -21,5 +21,10 @@
 #import "UIView+Frame.h"
 #import "FMButton.h"
 
+#import "WSSTextField.h"
 #import "UIImage+Resizing.h"
+
+
+#import <UIButton+WebCache.h>
+#import <UIImageView+WebCache.h>
 #endif /* PublicBase_h */
