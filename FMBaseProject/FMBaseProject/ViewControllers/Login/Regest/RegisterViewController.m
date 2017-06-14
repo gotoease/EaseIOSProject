@@ -91,8 +91,11 @@
     NSDictionary *params = @{@"userName":userName,@"password":code};
     FMRequestUtil *req = [FMRequestUtil sharedInstance];
     [req POST:urlString dict:params succeed:^(id data) {
+        WSMakeToastInKeyWindow(@"注册成功，请登录");
+        [self.navigationController.navigationBar popNavigationItemAnimated:YES];
         NSLog(@"%@",data);
     } failure:^(NSError *error) {
+        WSMakeToastInKeyWindow(@"注册失败");
         NSLog(@"%@",error.userInfo);
     }];
 }

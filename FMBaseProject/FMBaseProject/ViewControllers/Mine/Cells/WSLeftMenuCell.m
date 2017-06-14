@@ -24,14 +24,15 @@
     UIImageView *arrowImg;
     UIView *_circle;
     UIImageView *tipImage;
+    UIView *line;
     
 }
 
 - (void)cellDidLoad
 {
     [super cellDidLoad];
-//    iconImg = [[UIImageView alloc] initWithFrame:CGRectMake(32, (48-18)/2, 18, 18)];
-//    [self.contentView addSubview:iconImg];
+    iconImg = [[UIImageView alloc] initWithFrame:CGRectMake(32, (48-18)/2, 18, 18)];
+    [self.contentView addSubview:iconImg];
     
     //说明文字
     captionLab = [[UILabel alloc] initWithFrame:CGRectMake(iconImg.right + 18, iconImg.top + 2, 100, 14)];
@@ -43,6 +44,10 @@
 //    tipImage.image = [UIImage imageNamed:@"icon_tuijianyoujiang"];
 //    tipImage.hidden = YES;
 //    [self.contentView addSubview:tipImage];
+    
+    line = [[UIView alloc]initWithFrame:CGRectMake(32, 47.5, FMScreenWidth - 64, 0.5)];
+    line.backgroundColor = kLineBgColor;
+    [self.contentView addSubview:line];
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{

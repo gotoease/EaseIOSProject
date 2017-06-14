@@ -11,7 +11,9 @@
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 #define WO(obj,weakObj)  __weak __typeof(&*obj)weakObj = obj;
-
+// 是否为空
+#define ISNULL(_VAR) (_VAR == nil || [_VAR isKindOfClass:[NSNull class]])
+#define ISEMPTY(_STR) (ISNULL(_STR) || [_STR isKindOfClass:[NSString class]] && !((NSString*)_STR).length)
 
 //字符串定义
 #pragma mark - 颜色

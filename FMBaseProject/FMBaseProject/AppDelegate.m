@@ -70,6 +70,16 @@
     
 }
 
+-(void)gotoRoot{
+    if (!ISNULL(self.window.rootViewController)) {
+        self.window.rootViewController = nil;
+    }
+    RootTabBarViewController *rootVC = [[RootTabBarViewController alloc] init];
+    rootVC.delegate = self;
+    self.window.rootViewController=rootVC;
+    [self.window makeKeyAndVisible];
+}
+
 -(void)showToast:(NSString *)str {
     [self performSelector:@selector(showToastT:) withObject:str afterDelay:0.2];
 }

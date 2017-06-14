@@ -16,5 +16,6 @@
 @property (strong, nonatomic) FMLoginInfo *loginInfo;//登录数据
 @property (assign, nonatomic) BOOL isKeyboard;
 - (void)showToast:(NSString *)str;
+-(void)gotoRoot;
 @end
 

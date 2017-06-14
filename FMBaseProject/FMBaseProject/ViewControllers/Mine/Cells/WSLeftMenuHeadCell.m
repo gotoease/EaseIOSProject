@@ -27,7 +27,7 @@
     [super cellDidLoad];
 
     self.contentView.backgroundColor = [UIColor clearColor];
-    iconImg = [[UIButton alloc] initWithFrame:CGRectMake(32, 64, 56, 56)];
+    iconImg = [[UIButton alloc] initWithFrame:CGRectMake(32, 44, 56, 56)];
    
     iconImg.layer.masksToBounds = YES;
     iconImg.layer.cornerRadius = 28.0;
@@ -37,7 +37,7 @@
     [iconImg addTarget:self action:@selector(uploadTouXiang) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:iconImg];
 
-    _userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(iconImg.right+18, 64, FMScreenWidth - 210, 56)];
+    _userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(iconImg.right+18, 44, FMScreenWidth - 210, 56)];
     _userNameLabel.text = @"点击登录";
     _userNameLabel.userInteractionEnabled = YES;
     _userNameLabel.font = FMFontSys(18);

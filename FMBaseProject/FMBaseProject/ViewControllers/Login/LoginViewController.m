@@ -8,7 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-@interface LoginViewController (){
+@interface LoginViewController ()<UITextFieldDelegate>{
     UIImageView *View;
     UIView *bgView;
     UITextField *pwd;
@@ -28,25 +28,12 @@
     [super viewDidLoad];
     self.navHidden = YES;
     View=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    //View.backgroundColor=[UIColor redColor];
     View.image=[UIImage imageNamed:@"bg4"];
     [self.view addSubview:View];
     
-    ////    self.title=@"登陆";
-    ////    UIBarButtonItem *addBtn = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(clickaddBtn:)];
-    ////    [addBtn setImage:[UIImage imageNamed:@"goback_back_orange_on"]];
-    ////    [addBtn setImageInsets:UIEdgeInsetsMake(0, -15, 0, 15)];
-    ////    addBtn.tintColor=[UIColor colorWithRed:248/255.0f green:144/255.0f blue:34/255.0f alpha:1];
-    ////    [self.navigationItem setLeftBarButtonItem:addBtn];
-    //
-    //    UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(zhuce)];
-    //    right.tintColor=[UIColor colorWithRed:248/255.0f green:144/255.0f blue:34/255.0f alpha:1];
-    //    self.navigationItem.rightBarButtonItem=right;
-    
-    //为了显示背景图片自定义navgationbar上面的三个按钮
     UIButton *but =[[UIButton alloc]initWithFrame:CGRectMake(5, 27, 35, 35)];
     [but setImage:[UIImage imageNamed:@"goback_back_orange_on"] forState:UIControlStateNormal];
-    [but addTarget:self action:@selector(clickaddBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [but addTarget:self action:@selector(dissMissBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:but];
     
     UIButton *zhuce =[[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width-60, 30, 50, 30)];
@@ -70,10 +57,13 @@
     [self createLabel];
 }
 
--(void)clickaddBtn:(UIButton *)button
+-(void)dissMissBtn:(UIButton *)button
 {
+   
     [self dismissViewControllerAnimated:YES completion:^{
-        
+//        if (![FMLoginInfo isLogin]) {
+//            [[FMUtil appDelegate] gotoRoot];
+//        }
     }];
 }
 
@@ -97,7 +87,7 @@
     bgView.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:bgView];
     
-    user=[self createTextFielfFrame:CGRectMake(60, 10, 271, 30) font:[UIFont systemFontOfSize:14] placeholder:@"请输入您手机号码"];
+    user=[self createTextFielfFrame:CGRectMake(60, 10, 271, 30) font:[UIFont systemFontOfSize:14] placeholder:@"请输入用户名"];
     //user.text=@"13419693608";
     user.keyboardType=UIKeyboardTypeNumberPad;
     user.clearButtonMode = UITextFieldViewModeWhileEditing;
@@ -138,19 +128,10 @@
 
 -(void)createImageViews
 {
-    //    UIImageView *userImageView=[self createImageViewFrame:CGRectMake(25, 10, 25, 25) imageName:@"ic_landing_nickname" color:nil];
-    //    UIImageView *pwdImageView=[self createImageViewFrame:CGRectMake(25, 60, 25, 25) imageName:@"ic_landing_password" color:nil];
-    //    UIImageView *line1=[self createImageViewFrame:CGRectMake(25, 50, 260, 1.5) imageName:nil color:[UIColor lightGrayColor]];
-    //
-    //    //UIImageView *line2=[self createImageViewFrame:CGRectMake(88, 210, 280, 1) imageName:nil color:[UIColor grayColor]];
     
     UIImageView *line3=[self createImageViewFrame:CGRectMake(2, 400, 100, 1) imageName:nil color:[UIColor lightGrayColor]];
     UIImageView *line4=[self createImageViewFrame:CGRectMake(self.view.frame.size.width-100-4, 400, 100, 1) imageName:nil color:[UIColor lightGrayColor]];
-    
-    //    [bgView addSubview:userImageView];
-    //    [bgView addSubview:pwdImageView];
-    //    [bgView addSubview:line1];
-    //[self.view addSubview:line2];
+
     [self.view addSubview:line3];
     [self.view addSubview:line4];
     
@@ -162,12 +143,6 @@
     UIButton *landBtn=[self createButtonFrame:CGRectMake(10, 190, self.view.frame.size.width-20, 37) backImageName:nil title:@"登录" titleColor:[UIColor whiteColor]  font:[UIFont systemFontOfSize:19] target:self action:@selector(landClick)];
     landBtn.backgroundColor=[UIColor colorWithRed:248/255.0f green:144/255.0f blue:34/255.0f alpha:1];
     landBtn.layer.cornerRadius=5.0f;
-    
-//    UIButton *newUserBtn=[self createButtonFrame:CGRectMake(5, 235, 70, 30) backImageName:nil title:@"快速注册" titleColor:[UIColor grayColor] font:[UIFont systemFontOfSize:13] target:self action:@selector(registration:)];
-//    //newUserBtn.backgroundColor=[UIColor lightGrayColor];
-//    
-//    UIButton *forgotPwdBtn=[self createButtonFrame:CGRectMake(self.view.frame.size.width-75, 235, 60, 30) backImageName:nil title:@"找回密码" titleColor:[UIColor grayColor] font:[UIFont systemFontOfSize:13] target:self action:@selector(fogetPwd:)];
-    //fogotPwdBtn.backgroundColor=[UIColor lightGrayColor];
     
     
 #define Start_X 60.0f           // 第一个按钮的X坐标
@@ -227,7 +202,8 @@
     UITextField *textField=[[UITextField alloc]initWithFrame:frame];
     
     textField.font=font;
-    
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.delegate = self;
     textField.textColor=[UIColor grayColor];
     
     textField.borderStyle=UITextBorderStyleNone;
@@ -286,34 +262,41 @@
 //登录
 -(void)landClick
 {
+    WS(bself);
     if ([user.text isEqualToString:@""])
     {
-        //[SVProgressHUD showInfoWithStatus:@"亲,请输入用户名"];
+        WSMakeToastInKeyWindow(@"亲,请输入用户名");
         return;
     }
-    else if (user.text.length <11)
+    else if (user.text.length <6)
     {
-        //[SVProgressHUD showInfoWithStatus:@"您输入的手机号码格式不正确"];
+        WSMakeToastInKeyWindow(@"亲,用户名格式不正确");
         return;
     }
     else if ([pwd.text isEqualToString:@""])
     {
-        //[SVProgressHUD showInfoWithStatus:@"亲,请输入密码"];
+        WSMakeToastInKeyWindow(@"亲,请输入密码");
         return;
     }
     else if (pwd.text.length <6)
     {
-        //[SVProgressHUD showInfoWithStatus:@"亲,密码长度至少六位"];
+        WSMakeToastInKeyWindow(@"亲,密码长度至少六位");
         return;
     }
     
     FMRequestUtil *req = [FMRequestUtil sharedInstance];
     
     NSString *urlString = @"http://192.168.1.23/login?";
-    NSDictionary *params = @{@"userName":@"admin",@"password":@"123456"};
+    NSDictionary *params = @{@"userName":user.text,@"password":pwd.text};
     [req POST:urlString dict:params succeed:^(id data) {
+        
+        [bself dismissViewControllerAnimated:YES completion:^{
+            WSMakeToastInKeyWindow(@"登录成功");
+        }];
+        
         NSLog(@"%@",data);
     } failure:^(NSError *error) {
+        WSMakeToastInKeyWindow(@"连接失败");
         NSLog(@"%@",error.userInfo);
     }];
     
@@ -374,5 +357,8 @@
     
     return chuLi;
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

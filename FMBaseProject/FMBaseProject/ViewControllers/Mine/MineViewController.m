@@ -20,12 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navBar.title = self.myTitle;
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     self.formManager[@"WSLeftMenuHeadItem"] = @"WSLeftMenuHeadCell";
     self.formManager[@"WSLeftMenuItem"] = @"WSLeftMenuCell";
     self.formManager[@"WSLoginBtnItem"] = @"WSLoginBtnCell";
+    self.formTable.height = FMScreenHeight - 64 - 44;
+//    if ([FMLoginInfo isLogin]) {
+        [self initForm];
+//    }
     
-     [self initForm];
 }
 
 - (void)initForm{
@@ -35,20 +38,22 @@
     
     self.item01 = [[WSLeftMenuHeadItem alloc]init];
     self.item01.uploadHead = ^(WSLeftMenuHeadItem *item){
-//        [bself uploadTouXiang];
+        if ([FMLoginInfo isLogin]) {
+                [FMAppUtil goToLogin];
+        }
     };
     [section0 addItem:self.item01];
 
     
     WSLeftMenuItem *item03 = [[WSLeftMenuItem alloc ]init];
     item03.captionText = @"我的关注";
-    item03.iconImgName = @"icon_myWallet";
+    item03.iconImgName = @"icon_myCollection";
     item03.selectionHandler = ^(WSLeftMenuItem *item){
         if (![FMLoginInfo isLogin]) {
             [bself goLogin];
             return;
         }else{
-//            WSRootNavPush([[WSWalletViewController alloc] init]);
+            
         }
     };
     [section0 addItem:item03];
@@ -67,7 +72,7 @@
     
     WSLeftMenuItem *item05 = [[WSLeftMenuItem alloc ]init];
     item05.captionText = @"升级成住家";
-    item05.iconImgName = @"icon_mykefua";
+    item05.iconImgName = @"icon_myCollection";
     item05.selectionHandler = ^(WSLeftMenuItem *item){
         
     };
@@ -75,7 +80,7 @@
     
     WSLeftMenuItem *item06 = [[WSLeftMenuItem alloc ]init];
     item06.captionText = @"推荐给朋友";
-    item06.iconImgName = @"icon_mySetting";
+    item06.iconImgName = @"icon_myCollection";
     item06.selectionHandler = ^(WSLeftMenuItem *item){
        
     };
@@ -83,7 +88,7 @@
     
     WSLeftMenuItem *item07 = [[WSLeftMenuItem alloc ]init];
     item07.captionText = @"账号设置";
-    item07.iconImgName = @"icon_mySetting";
+    item07.iconImgName = @"icon_myCollection";
     item07.selectionHandler = ^(WSLeftMenuItem *item){
         
     };
@@ -91,7 +96,7 @@
     
     WSLeftMenuItem *item08 = [[WSLeftMenuItem alloc ]init];
     item08.captionText = @"通用设置";
-    item08.iconImgName = @"icon_mySetting";
+    item08.iconImgName = @"icon_myCollection";
     item08.selectionHandler = ^(WSLeftMenuItem *item){
         
     };
@@ -100,11 +105,13 @@
     
     WSLeftMenuItem *item09 = [[WSLeftMenuItem alloc ]init];
     item09.captionText = @"意见反馈";
-    item09.iconImgName = @"icon_mySetting";
+    item09.iconImgName = @"icon_myCollection";
     item09.selectionHandler = ^(WSLeftMenuItem *item){
         
     };
     [section0 addItem:item09];
+    
+    
     
     WSLoginBtnItem *loginItem = [[WSLoginBtnItem alloc] init];
     loginItem.titleText = @"退出登录";
@@ -116,8 +123,8 @@
         WSMakeToastInKeyWindow(@"退出");
     };
     [section0 addItem:loginItem];
-    
-    
+    FMEmptyItem *empty = [[FMEmptyItem alloc]initWithHeight:20];
+    [section0 addItem:empty];
     [sectionArray addObject:section0];
     [self.formManager replaceSectionsWithSectionsFromArray:sectionArray];
     [self.formTable reloadData];
